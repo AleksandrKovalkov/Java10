@@ -3,7 +3,7 @@ package ru.netology.domain;
 
 public class Radioman {
     private String name;
-    private int currentStation;
+    private int currentStation = 10;
     private int currentVolume;
     private int maxStation = 9;
     private int minStation = 0;
@@ -11,11 +11,10 @@ public class Radioman {
     private int minVolume = 0;
     private boolean on;
 
-    public Radioman(String name) {
-        this.name = name;
+    public Radioman() {
     }
 
-    public Radioman() {
+    public Radioman(String name, int currentStation, int currentVolume, int maxStation, int minStation, int maxVolume, int minVolume, boolean on) {
         this.name = name;
         this.currentStation = currentStation;
         this.currentVolume = currentVolume;
@@ -30,36 +29,12 @@ public class Radioman {
         return name;
     }
 
-    public int getCurrentStation() {
-        return currentStation;
-    }
-
-    public int getCurrentVolume() {
-        return currentVolume;
-    }
-
-    public int getMaxStation() {
-        return maxStation;
-    }
-
-    public int getMinStation() {
-        return minStation;
-    }
-
-    public int getMaxVolume() {
-        return maxVolume;
-    }
-
-    public int getMinVolume() {
-        return minVolume;
-    }
-
-    public boolean isOn() {
-        return on;
-    }
-
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getCurrentStation() {
+        return currentStation;
     }
 
     public void setCurrentStation(int currentStation) {
@@ -72,6 +47,10 @@ public class Radioman {
         this.currentStation = currentStation;
     }
 
+    public int getCurrentVolume() {
+        return currentVolume;
+    }
+
     public void setCurrentVolume(int currentVolume) {
         if (currentVolume < minVolume) {
             return;
@@ -82,20 +61,40 @@ public class Radioman {
         this.currentVolume = currentVolume;
     }
 
+    public int getMaxStation() {
+        return maxStation;
+    }
+
     public void setMaxStation(int maxStation) {
         this.maxStation = maxStation;
+    }
+
+    public int getMinStation() {
+        return minStation;
     }
 
     public void setMinStation(int minStation) {
         this.minStation = minStation;
     }
 
+    public int getMaxVolume() {
+        return maxVolume;
+    }
+
     public void setMaxVolume(int maxVolume) {
         this.maxVolume = maxVolume;
     }
 
+    public int getMinVolume() {
+        return minVolume;
+    }
+
     public void setMinVolume(int minVolume) {
         this.minVolume = minVolume;
+    }
+
+    public boolean isOn() {
+        return on;
     }
 
     public void setOn(boolean on) {
