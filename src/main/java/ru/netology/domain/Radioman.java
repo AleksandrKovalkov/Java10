@@ -14,15 +14,10 @@ public class Radioman {
     public Radioman() {
     }
 
-    public Radioman(String name, int currentStation, int currentVolume, int maxStation, int minStation, int maxVolume, int minVolume, boolean on) {
-        this.name = name;
+    public Radioman(int currentStation) {
+
         this.currentStation = currentStation;
-        this.currentVolume = currentVolume;
-        this.maxStation = maxStation;
-        this.minStation = minStation;
-        this.maxVolume = maxVolume;
-        this.minVolume = minVolume;
-        this.on = on;
+        maxStation = currentStation - 1;
     }
 
     public String getName() {
