@@ -3,7 +3,7 @@ package ru.netology.domain;
 
 public class Radioman {
     private String name;
-    private int currentStation = 10;
+    private int currentStation = 9;
     private int currentVolume;
     private int maxStation = 9;
     private int minStation = 0;
