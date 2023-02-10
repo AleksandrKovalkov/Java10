@@ -17,7 +17,7 @@ public class Radioman {
     public Radioman(int currentStation) {
 
         this.currentStation = currentStation;
-        maxStation = currentStation - 1;
+
     }
 
     public String getName() {
