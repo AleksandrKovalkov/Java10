@@ -5,19 +5,18 @@ public class Radioman {
     private String name;
     private int currentStation = 9;
     private int currentVolume;
-    private int maxStation = 9;
+    private int maxStation;
     private int minStation = 0;
     private int maxVolume = 100;
     private int minVolume = 0;
     private boolean on;
 
     public Radioman() {
+        maxStation = 9;
     }
 
-    public Radioman(int currentStation) {
-
-        this.currentStation = currentStation;
-
+    public Radioman(int stationsCount) {
+        maxStation = stationsCount - 1;
     }
 
     public String getName() {
@@ -114,7 +113,7 @@ public class Radioman {
 
     public void increaseVolume() {
         if (currentVolume >= maxVolume) {
-            setCurrentVolume(minVolume);
+            return;
         } else {
             currentVolume = currentVolume + 1;
         }
@@ -122,7 +121,7 @@ public class Radioman {
 
     public void downVolume() {
         if (currentVolume <= minVolume) {
-            setCurrentVolume(maxVolume);
+            return;
         } else {
             currentVolume = currentVolume - 1;
         }

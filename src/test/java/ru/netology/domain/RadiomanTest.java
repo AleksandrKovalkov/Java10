@@ -98,11 +98,11 @@ class RadiomanTest {
     }
 
     @Test
-    void transitionFromMaxToMinVolume() {
+    void transitionFromMaxVolume() {
         radio.setCurrentVolume(100);
 
         radio.increaseVolume();
-        assertEquals(0, radio.getCurrentVolume());
+        assertEquals(100, radio.getCurrentVolume());
     }
 
     @Test
@@ -114,11 +114,11 @@ class RadiomanTest {
     }
 
     @Test
-    void transitionFromMinToMaxVolume() {
+    void transitionFromMinVolume() {
         radio.setCurrentVolume(0);
 
         radio.downVolume();
-        assertEquals(100, radio.getCurrentVolume());
+        assertEquals(0, radio.getCurrentVolume());
     }
 
 
